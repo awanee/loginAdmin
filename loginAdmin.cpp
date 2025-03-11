@@ -1,15 +1,15 @@
-#include <iostream>
+#include <iostream> // library c++ merakyat;
 
-using namespace std;
+using namespace std; // pake ini kalo coutnya gak mau panjang;
 
 int main() {
-    string username, password;
-    char hari;
+    string username, password, hari; // deklarasi variabel
+    int pilihan;
 
-    cout << "Username: ";
+    cout << "Username: "; // meminta user memasukkan data; 
     cin >> username;
 
-    if (username == "admin") {
+    if (username == "admin") { // pengondisian if untuk login; 
         cout << "Password: ";
         cin >> password;
             if (password == "admin123") {
@@ -21,35 +21,26 @@ int main() {
         cout << "Username Tidak Terdaftar!";
     }
 
-    cout << "Masukkan Nomor Hari: ";
-    cin >> hari;
-    cout << "Adalah Hari: "; 
+    cout << "Masukkan Angka Hari [1-7]: "; // meminta user untuk memasukkan angka hari;
+    cin >> pilihan; 
 
-    switch (hari){
-        case '1':
-        cout << "Senin";
-        break;
-        case '2':
-        cout << "Selasa";
-        break;
-        case '3':
-        cout << "Rabu";
-        break;
-        case '4':
-        cout << "Kamis";
-        break;
-        case '5':
-        cout << "Jumat";
-        break;
-        case '6':
-        cout << "Sabtu";
-        break;
-        case '7':
-        cout << "Minggu";
-        break;
-        default:
-        cout << "Pilihan Salah!";
+    if (pilihan == 1) { // pengondisian if untuk pilihan hari;
+        hari = "Senin";
+    } else if (pilihan == 2 ) {
+        hari = "Selasa";
+    } else if (pilihan == 3 ) {
+        hari = "Rabu";
+    } else if (pilihan == 4) {
+        hari = "Kamis";
+    } else if (pilihan == 5) {
+        hari = "Jumat";
+    } else if (pilihan == 6 ) {
+        hari = "Sabtu";
+    } else if (pilihan == 7) {
+        hari = "Minggu";
+    } else {
+        cout << "Pilihan Anda Tidak Tersedia!";
     }
 
-    cout << endl;
+    cout << "Hari ke-" << pilihan << " Adalah Hari " << hari << endl; // cetak hari-nya;
 }
